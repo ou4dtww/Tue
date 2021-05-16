@@ -1,5 +1,9 @@
 import re
 
+# function to count words in string contents
+def word_count(string):
+    return(len(string.strip().split(" ")))
+
 # open file to write, create the file if necessary
 print ("Reading data set 1")
 f=open("mydata.txt", "w+")
@@ -16,5 +20,8 @@ if f.mode == 'r':
     contents=f.read()
     print("Fruits:",re.sub(" ", ", ", contents))
 
+# Give total quantity
+print("Total Fruits:",word_count(contents))
+    
 # close the file 
 f.close()
