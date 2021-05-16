@@ -9,6 +9,13 @@ print ("Reading data set 1")
 f=open("mydata.txt", "w+")
 f.write("apple orange apple banana apples melon grapes melon orange apple")
 
+
+# write to the file with second set of data
+print ("Reading data set 2")
+f=open("mydata.txt", "a")
+f.write(" melon apple peach apple apples grapes kiwi clementine apples pear")
+
+
 # close the file
 f.close()
 
@@ -18,7 +25,7 @@ f=open("mydata.txt", "r")
 # ensure file is available to read, and put contents into 'contents', and output
 if f.mode == 'r':
     contents=f.read()
-    print("Fruits:",re.sub(" ", ", ", contents))
+#    print("Fruits:",re.sub(" ", ", ", contents))
 
 # Give total quantity
 print("Total Fruits:",word_count(contents))
